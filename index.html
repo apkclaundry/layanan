@@ -49,6 +49,8 @@
         <textarea id="service-description" placeholder="Masukkan Deskripsi Layanan" required></textarea>
       </div>
       <button type="submit" class="btn-save">Simpan</button>
+      <button type="button" id="reset-form" class="btn-reset">Reset Form</button>
+
     </form>
 
     <div class="container">
@@ -57,15 +59,16 @@
       <table id="service-table">
         <thead>
           <tr>
-            <th>ID Layanan</th>
-            <th>Nama Layanan</th>
-            <th>Harga</th>
-            <th>Deskripsi</th>
+            <th data-column="id">ID Layanan</th>
+            <th data-column="name">Nama Layanan</th>
+            <th data-column="price">Harga</th>
+            <th data-column="description">Deskripsi</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody></tbody>
       </table>
+      
     </div>
   </div>
   <!-- SweetAlert2 JS -->
