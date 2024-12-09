@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LaundryKuy - Manajemen Layanan</title>
+  <link rel="stylesheet" href="src/css/services.css" />
+  <!-- SweetAlert2 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.6/dist/sweetalert2.min.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="src/img/logo.png" alt="Logo Laundry POS" />
+        <h1>Laundry POS</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="karyawan.html">Karyawan</a></li>
+          <li><a href="stock.html">Stock</a></li>
+          <li><a href="services.html">Layanan</a></li>
+          <li><a href="laporan.html">Laporan</a></li>
+        </ul>
+        <button class="burger" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <h1 class="title">LaundryKuy - Manajemen Layanan</h1>
+    <form id="service-form">
+      <div class="form-group">
+        <label for="service-id">ID Layanan</label>
+        <input type="text" id="service-id" placeholder="Masukkan ID Layanan" required />
+      </div>
+      <div class="form-group">
+        <label for="service-name">Nama Layanan</label>
+        <input type="text" id="service-name" placeholder="Masukkan Nama Layanan" required />
+      </div>
+      <div class="form-group">
+        <label for="service-price">Harga per Kilogram</label>
+        <input type="number" id="service-price" placeholder="Masukkan Harga per Kilogram" min="0" required />
+      </div>
+      <div class="form-group">
+        <label for="service-description">Deskripsi</label>
+        <textarea id="service-description" placeholder="Masukkan Deskripsi Layanan" required></textarea>
+      </div>
+      <button type="submit" class="btn-save">Simpan</button>
+    </form>
+
+    <div class="container">
+      <h2 class="subtitle">Daftar Layanan</h2>
+      <!-- Tabel untuk tampilan desktop -->
+      <table id="service-table">
+        <thead>
+          <tr>
+            <th>ID Layanan</th>
+            <th>Nama Layanan</th>
+            <th>Harga</th>
+            <th>Deskripsi</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <!-- SweetAlert2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.6/dist/sweetalert2.min.js"></script>
+  <script src="src/js/services.js" type="module"></script>
+</body>
+</html>
